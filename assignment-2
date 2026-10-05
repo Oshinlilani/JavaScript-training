@@ -1,0 +1,65 @@
+/*
+Task:
+1. Declare all the variables in the above form without initialising and print their value.
+2. After printing their value assign them as null and print it again.
+3. Declare an object called employeeDetails and add all the above variables
+   to this object now as keys with value as null and print this object.
+*/
+
+// 1. Declare variables without initializing
+
+let name;
+let email;
+let age;
+let address;
+let phoneNumber;
+let gender;
+let isMarried;
+
+// Print the values
+console.log("Before assigning null:");
+console.log(name);
+console.log(email);
+console.log(age);
+console.log(address);
+console.log(phoneNumber);
+console.log(gender);
+console.log(isMarried);
+
+
+// 2. Assign null to all variables
+
+name = null;
+email = null;
+age = null;
+address = null;
+phoneNumber = null;
+gender = null;
+isMarried = null;
+
+// Print the values again
+console.log("After assigning null:");
+console.log(name);
+console.log(email);
+console.log(age);
+console.log(address);
+console.log(phoneNumber);
+console.log(gender);
+console.log(isMarried);
+
+
+// 3. Create employeeDetails object
+
+const employeeDetails = {
+    name: null,
+    email: null,
+    age: null,
+    address: null,
+    phoneNumber: null,
+    gender: null,
+    isMarried: null
+};
+
+// Print the object
+console.log("Employee Details:");
+console.log(employeeDetails);
