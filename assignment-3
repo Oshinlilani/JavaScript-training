@@ -1,0 +1,26 @@
+/*
+Task:
+In the variables declared above, assign the variables
+as appropriate default values instead of null.
+*/
+
+// Assign appropriate default values
+
+let name = "";
+let email = "";
+let age = 0;
+let address = "";
+let phoneNumber = "";
+let gender = "";
+let isMarried = false;
+
+// Print the values
+console.log("Default Values:");
+
+console.log("Name:", name);
+console.log("Email:", email);
+console.log("Age:", age);
+console.log("Address:", address);
+console.log("Phone Number:", phoneNumber);
+console.log("Gender:", gender);
+console.log("Are you married:", isMarried);
