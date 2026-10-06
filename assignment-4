@@ -1,0 +1,57 @@
+// Q1. Take 2 numbers and print the smallest one amongst them
+
+let a = 8;
+let b = 10;
+
+if(a > b){
+    console.log(a);
+} else {
+    console.log(b);
+};
+
+// Q2. Take 3 numbers and print the biggest one amongst them
+
+let x = 10;
+let y = 15;
+let z = 20;
+
+if(x > y && x > z){
+    console.log(x);
+} else if(y > x && y > z){
+    console.log(y);
+} else {
+    console.log(z);
+};
+
+// Q3. Use switch case to return a grade for the score, either "A", "B", "C", "D", or "F". (Take convension for numbers and grades by yourself)
+// Anything below 50 is F
+
+let score = 89;
+let grade;
+
+switch (true){
+    case score >= 90 && score <= 100:
+        grade = 'A';
+        break;
+
+    case score >= 80 && score < 90:
+        grade = 'B';
+        break;
+
+    case score >= 70 && score < 80:
+        grade = 'C';
+        break;
+
+    case score >= 60 && score < 70:
+        grade = 'D';
+        break;
+
+    case score >= 50 && score < 60:
+        grade = 'E';
+        break;
+
+    default:
+        grade = 'F';
+};
+
+console.log("Grade" , grade);
