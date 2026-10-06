@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul Sharma",
+        "age": 35,
+        "salary": 650000
+    },
+    {
+        "id": 2,
+        "name": "Amit Verma",
+        "age": 28,
+        "salary": 550000
+    },
+    {
+        "id": 3,
+        "name": "Priya Singh",
+        "age": 52,
+        "salary": 450000
+    },
+    {
+        "id": 4,
+        "name": "Neha Sharma",
+        "age": 45,
+        "salary": 750000
+    },
+    {
+        "id": 5,
+        "name": "Samir Gupta",
+        "age": 32,
+        "salary": 850000
+    }
+]
