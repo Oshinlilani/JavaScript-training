@@ -1,0 +1,41 @@
+//  Q1. Find sum of first 10 natural numbers
+
+const array = [1,2,3,4,5,6,7,8,9,10];
+let sum = 0;
+
+for(let i = 0; i < array.length; i++){
+    sum += array[i];
+};
+
+console.log("Sum", sum);
+
+// Q2. Print fibbonaci series upto first 10 numbers.
+
+let first = 0;
+let second = 1;
+let count = 0;
+
+while(count <= 10){
+
+    console.log(first);
+    let next = first + second;
+
+    first = second;
+    second = next;
+
+    count++;
+}
+
+// Q3. Print all the keys and values of employee object used in first problem
+
+let employeeDetails = {
+    name: null,
+    age: null,
+    salary: null,
+    department: null
+};
+
+for (let key in employeeDetails) {
+    console.log("Key:", key,", ", "Value:", employeeDetails[key]);
+}
+
