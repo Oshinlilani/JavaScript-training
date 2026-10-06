@@ -1,0 +1,30 @@
+// Q1. Take an array of objects of employees created above and print those employees whose age is less than 50
+
+let employees = [
+    {
+        name: "Rahul",
+        age: 35,
+        salary: 40000
+    },
+    {
+        name: "Priya",
+        age: 52,
+        salary: 50000
+    },
+    {
+        name: "Amit",
+        age: 28,
+        salary: 35000
+    },
+    {
+        name: "Neha",
+        age: 45,
+        salary: 45000
+    }
+];
+
+for(let i = 0; i < employees.length; i++){
+    if(employees[i].age < 50){
+        console.log(employees[i]);
+    }
+}
