@@ -1,0 +1,67 @@
+// Q1. Create a function that takes a number and prints all even numbers upto that number
+
+function printEvenNumbers(num) {
+    for (let i = 1; i <= num; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+
+printEvenNumbers(10);
+
+
+// Q2. Create a function that takes 2 parameter => an array of employees and age and returns all employees whose age is less than input age.
+
+
+let employees = [
+    {
+        name: "Rahul",
+        age: 35,
+        salary: 40000
+    },
+    {
+        name: "Priya",
+        age: 52,
+        salary: 50000
+    },
+    {
+        name: "Amit",
+        age: 28,
+        salary: 35000
+    },
+    {
+        name: "Neha",
+        age: 45,
+        salary: 45000
+    }
+];
+
+
+function getEmployeesByAge(employees, age) {
+    let result = [];
+
+    for (let employee of employees) {
+        if (employee.age < age) {
+            result.push(employee);
+        }
+    }
+
+    return result;
+}
+
+console.log(getEmployeesByAge(employees, 40));
+
+// Q3. Create a function that takes 2 parameter => an array of employees and an attribute and returns all employees sorted based on the emoplees attribute being passed as second parameter.
+
+
+function sortEmployees(employees, attribute) {
+    return employees.sort(function (a, b) {
+        return a[attribute] - b[attribute];
+    });
+}
+
+console.log(sortEmployees(employees, "age"));
+
+console.log(sortEmployees(employees, "salary"));
+
