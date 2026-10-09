@@ -5,6 +5,8 @@ const changebtn = document.getElementById("changebtn");
 
 const skill = document.getElementById("skill");
 const skills = document.getElementById("skills");
+const location = document.getElementById("location");
+const locations = document.getElementById("locations");
 
 changebtn.addEventListener("click", () => {
     name.textContent = "Oshin lilani";
@@ -17,4 +19,8 @@ changebtn.addEventListener("click", () => {
     skills.classList.toggle("hidden");
     skill.classList.toggle("hidden");
 
+    changebtn.textContent = changebtn.textContent === "click me" ? "clicked" : "click me";
+
+    locations.classList.toggle("hidden");
+    location.classList.toggle("hidden");
 });
