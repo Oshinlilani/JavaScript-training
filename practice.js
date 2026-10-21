@@ -28,9 +28,11 @@ const newArr = arr.push(5);
 console.log(arr);
 console.log(newArr);
 
+// splice (targetIndex, deleteCount, newElement) - it modifies the original array and returns the deleted elements
 arr.splice(1, 0, 1)
 console.log(arr)
 
+// slice (startIndex, endIndex) - it returns a new array with the selected elements
 console.log(arr.slice(3,5))
 
 console.log(arr.unshift())
@@ -89,7 +91,7 @@ Promise.all([p1, p2])
      console.log("finally2")
    })
 
-   // it returns an array of objects describing the outcome of each promise
+// it returns an array of objects describing the outcome of each promise
 Promise.allSettled([p1, p3])
    .then(() => console.log("settled"))
    .catch(() => console.error("error"))
