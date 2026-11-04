@@ -362,27 +362,27 @@ const str = "javascript";
 
 // data()
 
-const obj = {
+const obj1 = {
   name: "Jitendra Yadav",
   age: 27,
 };
 
-// for(let key in obj){
+// for(let key in obj1){
 //   if(key === "name"){
-//     console.log(obj[key])
+//     console.log(obj1[key])
 //   }
 // }
 
-// Object.keys(obj).forEach((key) => {
-//   console.log(obj[key])
+// Object.keys(obj1).forEach((key) => {
+//   console.log(obj1[key])
 // })
 
-// Object.values(obj).forEach((value) => {
+// Object.values(obj1).forEach((value) => {
 //   console.log(value)
 // })
 
 // const obj = {
-//   name: "Jitendra Yadac",
+//   name: "Jitendra Yadav",
 //   age: 27,
 //   role: "Developer"
 // };
@@ -575,3 +575,94 @@ const students = [
 // 5. Display only the names of students whose subject is Maths.
 
 
+const employee = {
+  id: 101,
+  name: "Oshin",
+  salary: 35000,
+  department: "Development",
+  skills: ["JavaScript", "React", "Node.js"],
+  address: {
+    city: "Indore",
+    state: "MP"
+  }
+};
+
+// Task 1: Print all employee property names using Object.keys().
+
+// Task 2: Print all employee property values using Object.values().
+
+// Task 3: Print each key and value using Object.entries().
+
+// Task 4: Extract name and salary using destructuring.
+
+// Task 5: Create a new employee object with all existing properties and add:
+
+Object.keys(employee).forEach((name) => {
+  console.log(name)
+})
+
+Object.values(employee).forEach((name) => {
+  console.log(name)
+})
+
+
+Object.entries(employee).forEach(([key, value]) => {
+  console.log(key, value)
+})
+
+
+
+const { name, salary } = employee
+console.log("name : ", name, " | ", "salary : ", salary)
+
+const employee2 = {...employee, experience : "Fresher"}
+
+console.log(employee2)
+
+
+const employees = [
+  { id: 1, name: "Rahul", salary: 25000, department: "IT" },
+  { id: 2, name: "Priya", salary: 45000, department: "HR" },
+  { id: 3, name: "Amit", salary: 35000, department: "IT" },
+  { id: 4, name: "Neha", salary: 55000, department: "HR" },
+  { id: 5, name: "John", salary: 30000, department: "IT" }
+];
+
+
+// Write code to:
+// 1. Find the employee with the highest salary.
+// 2. Calculate the total salary of all employees.
+// 3. Count how many employees work in IT.
+// 4. Create an object containing only employee names and salaries.
+// 5. Group employees by department.
+
+const highestSalary = employees.reduce((item, max) => item.salary > max.salary ? item : max)
+console.log(highestSalary)
+
+const total = employees.reduce((acc, curr) => acc + curr.salary, 0);
+console.log(total)
+
+const IT = employees.filter(emp => emp.department === "IT")
+console.log(IT.length)
+
+const obj = employees.map((emp) =>{
+  return {
+    name : emp.name ,
+    salary : emp.salary
+  }
+})
+
+console.log(obj)
+
+
+
+const grouped = employees.reduce((acc, curr) => {
+  if(!acc[curr.department]){
+    acc[curr.department] = []
+  } 
+    acc[curr.department].push(curr)
+  
+  return acc
+},{})
+
+console.log(grouped)
