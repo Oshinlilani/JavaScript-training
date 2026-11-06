@@ -9,9 +9,15 @@
 </head>
 <body>
     <div class="flex flex-col items-center justify-center">
-        <div id="quiz" class="mt-8"></div>
-        <div class="mt-4">
+        <div id="quiz" class="mt-8 border p-4 "></div>
         
+        <div id="result" class="mt-4 text-lg font-bold"></div>
+
+        <!-- <button onclick="showScore()" class="mt-4 p-2 border rounded">Show Score</button> -->
+        <button onclick="nextQuestion()" class="mt-4 p-2 border rounded">Next</button>
+
+        <button onclick="location.reload()" class="mt-4 p-2 border rounded">Restart Quiz</button>
+
     </div>
 
     <script src="quiz.js"></script>
