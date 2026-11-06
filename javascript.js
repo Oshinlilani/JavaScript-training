@@ -597,27 +597,27 @@ const employee = {
 
 // Task 5: Create a new employee object with all existing properties and add:
 
-Object.keys(employee).forEach((name) => {
-  console.log(name)
-})
+// Object.keys(employee).forEach((name) => {
+//   console.log(name)
+// })
 
-Object.values(employee).forEach((name) => {
-  console.log(name)
-})
-
-
-Object.entries(employee).forEach(([key, value]) => {
-  console.log(key, value)
-})
+// Object.values(employee).forEach((name) => {
+//   console.log(name)
+// })
 
 
+// Object.entries(employee).forEach(([key, value]) => {
+//   console.log(key, value)
+// })
 
-const { name, salary } = employee
-console.log("name : ", name, " | ", "salary : ", salary)
 
-const employee2 = {...employee, experience : "Fresher"}
 
-console.log(employee2)
+// const { name, salary } = employee
+// console.log("name : ", name, " | ", "salary : ", salary)
+
+// const employee2 = {...employee, experience : "Fresher"}
+
+// console.log(employee2)
 
 
 const employees = [
@@ -636,23 +636,23 @@ const employees = [
 // 4. Create an object containing only employee names and salaries.
 // 5. Group employees by department.
 
-const highestSalary = employees.reduce((item, max) => item.salary > max.salary ? item : max)
-console.log(highestSalary)
+// const highestSalary = employees.reduce((item, max) => item.salary > max.salary ? item : max)
+// console.log(highestSalary)
 
-const total = employees.reduce((acc, curr) => acc + curr.salary, 0);
-console.log(total)
+// const total = employees.reduce((acc, curr) => acc + curr.salary, 0);
+// console.log(total)
 
-const IT = employees.filter(emp => emp.department === "IT")
-console.log(IT.length)
+// const IT = employees.filter(emp => emp.department === "IT")
+// console.log(IT.length)
 
-const obj = employees.map((emp) =>{
-  return {
-    name : emp.name ,
-    salary : emp.salary
-  }
-})
+// const obj = employees.map((emp) =>{
+//   return {
+//     name : emp.name ,
+//     salary : emp.salary
+//   }
+// })
 
-console.log(obj)
+// console.log(obj)
 
 
 
@@ -665,4 +665,236 @@ const grouped = employees.reduce((acc, curr) => {
   return acc
 },{})
 
-console.log(grouped)
+// console.log(grouped)
+
+
+// Task 1: Employee Details
+// You have an employee object:
+const employee1 = {
+    name: "Oshin",
+    age: 25,
+    salary: 25000,
+    department: "Development"
+};  
+
+// for(let name in employee1){
+//   console.log(employee1.name);
+// }
+
+// Your manager asks you to:
+// 1. Print the employee's name.
+// 2. Increase salary by 5000.
+// 3. Add a new property called experience with value 2.
+// 4. Delete the age property.
+// 5. Print the updated object.
+
+// Object.values(employee1).forEach((value) => {
+//   console.log(value)
+// })
+
+// console.log(employee1.name)
+
+// console.log(employee1.salary += 5000);
+
+// employee1.experience = 2;
+
+// delete employee1.age;
+
+// console.log(employee1);
+
+// Task 2 – Count Object Properties
+// You receive:
+// const user = {
+//     name: "Rahul",
+//     email: "rahul@gmail.com",
+//     age: 25,
+//     city: "Indore"
+// };
+
+
+// Your task: Write a function countProperties() that accepts an object and returns the total number of properties.
+
+// Task 2 – Count Object Properties
+// You receive:
+// const user = {
+//     name: "Rahul",
+//     email: "rahul@gmail.com",
+//     age: 25,
+//     city: "Indore"
+// };
+
+
+// Your task: Write a function countProperties() that accepts an object and returns the total number of properties.
+
+// function countProperties(obj){
+//   return Object.keys(obj).length
+
+//   // return count.length
+// }
+// console.log(countProperties(user))
+
+
+// let count = 0;
+
+// for(let key in user){
+//   count++;
+// }
+// console.log(count)
+
+// Next challenge: Find the highest salary
+const employees2 = {
+    emp1: { name: "Amit", salary: 25000 },
+    emp2: { name: "Rahul", salary: 40000 },
+    emp3: { name: "Priya", salary: 35000 }
+};
+
+
+// Write a function findHighestSalary(employees) that returns the employee with the highest salary.
+
+
+
+function highestSalary () {
+  let highest = 0
+  let name;
+  for(let key in employees){
+    if(employees[key].salary > highest){
+      highest = employees[key].salary
+      name = employees[key].name
+    }
+  }
+  console.log(name, highest);
+}
+// highestSalary()
+
+
+
+// Next challenge: Update Employee Information
+// Manager-style task
+// You have this object:
+const employee3 = {
+    id: 101,
+    name: "Amit",
+    salary: 30000,
+    department: "IT"
+};
+
+
+
+// Requirements:
+// 1. Accept an employee object.
+// 2. Accept a property name.
+// 3. Accept a new value.
+// 4. Update that property.
+// 5. Return the updated object.
+
+function updateEmployee(obj, property, value){
+  obj[property] = value;
+  return obj;
+}
+
+// console.log(updateEmployee(employee, "salary", 40000))
+
+
+// Next challenge – Don't use a loop!
+// You have this object:
+const user = {
+    name: "Rahul",
+    age: 25,
+    city: "Indore",
+    skills: ["JavaScript", "React"]
+};
+
+// Requirements:
+// 1. Accept an object.
+// 2. Accept a property name.
+// 3. Accept a value.
+// 4. Add that property to the object.
+// 5. Return the updated object.
+
+// Create a function:
+function addProperty(obj, key, value) {
+    obj[key] = value;
+  return obj;
+}
+
+// console.log(addProperty(user, "email", "rahul@gmail.com"))
+
+
+
+// Task 1: User Login Simulation
+// Your manager asks you to simulate a login API.
+
+// Create two functions:
+// 1. login(username, password):
+//    - Return a Promise.
+//    - If username is "admin" and password is "12345", resolve with "Login successful".
+//    - Otherwise, reject with "Invalid credentials".
+// 2. handleLogin():
+//    - Call the login function.
+//    - Handle success using .then().
+//    - Handle errors using .catch().
+// Expected output:
+// Login successful
+
+function login(username, password){
+  return new Promise((resolve, reject) => {
+    if(username === "admin" && password === "12345"){
+      resolve("Login successful")
+    } else{
+      reject("Invalid credentials")
+    }
+  })
+}
+
+const handleLogin = (username, password) => {
+  login(username, password).then((msg) => console.log(msg))
+  .catch((error) => console.error(error))
+}
+
+// handleLogin("admin", "12345");
+// handleLogin("user", "password");
+
+// Task 2 – Product API Simulation
+// Now let's increase the difficulty slightly.
+
+// Your manager asks you to simulate an API call.
+
+// Requirements:
+// 1. Create a function called fetchProducts().
+// 2. Return a Promise.
+// 3. Use setTimeout() to simulate a 2-second API delay.
+// 4. Resolve the Promise with this array:
+const products1 = [
+  { id: 1, name: "Laptop" },
+  { id: 2, name: "Mobile" },
+  { id: 3, name: "Keyboard" }
+];
+
+
+// 5. Display products using .then().
+// 6. Handle errors using .catch().
+// Expected flow:
+// API called...
+// (wait 2 seconds)
+// Products received:
+// [product array]
+
+
+
+
+function fetchProducts() {
+  return new Promise((resolve, reject) => {
+    console.log("API called...");
+    setTimeout(()=>{
+      resolve(products1);
+    }, 2000);
+  })
+}
+
+fetchProducts().then((products) => {
+  console.log(products);
+}).catch((error) => {
+  console.error(error);
+})
+
+
